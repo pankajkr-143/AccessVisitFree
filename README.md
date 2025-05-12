@@ -126,9 +126,9 @@
 
 ## 🛠️ Technology Stack
 
-* **Frontend:** React.js or Vue.js with Tailwind CSS
-* **Backend:** Node.js, Django, or Firebase
-* **Database:** MongoDB or PostgreSQL
+* **Frontend:** React.ts with Tailwind CSS
+* **Backend:** Node.ts, JWT for Auth
+* **Database:** Supabase
 * **APIs:** Google Maps, Travel APIs, Accessibility data sources (OpenStreetMap, etc.)
 
 ## ✅ Success Criteria
