@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility CSS variables */
+:root {
+  --transition-speed: 0.3s;
+}
+
+/* High contrast mode */
+.high-contrast {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #ffff00;
+  --border-color: #ffffff;
+  
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.high-contrast a {
+  color: var(--link-color);
+}
+
+.high-contrast img {
+  filter: grayscale(100%) contrast(120%);
+}
+
+.high-contrast button {
+  border: 2px solid var(--border-color);
+}
+
+/* Large text mode */
+.large-text {
+  font-size: 120%;
+  line-height: 1.5;
+}
+
+.large-text h1 {
+  font-size: 2.5rem;
+}
+
+.large-text h2 {
+  font-size: 2rem;
+}
+
+.large-text h3 {
+  font-size: 1.75rem;
+}
+
+.large-text button,
+.large-text input,
+.large-text select {
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Focus styles */
+*:focus {
+  outline: 2px solid #0066CC;
+  outline-offset: 2px;
+}
+
+/* Base animations and transitions */
+.transition-transform,
+.transition-colors,
+.transition-opacity,
+.transition-all {
+  transition-duration: var(--transition-speed);
+}
+
+/* Default body styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0066CC;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Truncate long text with ellipsis */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
